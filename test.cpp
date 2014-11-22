@@ -5,6 +5,10 @@
 
 using namespace std;
 
+/*
+ * Do a bunch of work. Specifically, read an int n off the input stream, then
+ * rean and add together n more ints off the stream and return the sum.
+ */
 int do_some_work(istream& istr)
 {
 	unsigned num_ints = 0;
@@ -22,11 +26,17 @@ int do_some_work(istream& istr)
 	return sum;
 }
 
+/*
+ * Format and print the result of some work
+ */
 void print_some_work(int i, unsigned c, ostream& ostr)
 {
 	ostr << "Case #" << c + 1 << ": " << i << endl;
 }
 
+/*
+ * Read an int n, then do and print some work n times.
+ */
 void do_all_the_work(istream& istr, ostream& ostr)
 {
 	unsigned num_work = 0;
