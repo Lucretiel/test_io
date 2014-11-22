@@ -1,4 +1,4 @@
-# Pipe me into your test shell
+# Pipe me into your test shell. No shell should reject this.
 
 echo "Redirect input, redirect output:"
 time ./test < test.in > result
@@ -11,6 +11,3 @@ time ./test -itest.in > result
 
 echo "Filename input, filename output:"
 time ./test -itest.in -oresult
-
-echo "Cat input, filename output:"
-cat test.in | time ./test -oresult
