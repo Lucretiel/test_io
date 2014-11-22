@@ -1,0 +1,16 @@
+# Pipe me into your test shell
+
+echo "Redirect input, redirect output:"
+time ./test < test.in > result
+
+echo "Redirect input, filename output:"
+time ./test < test.in -oresult
+
+echo "Filename input, redirect output:"
+time ./test -itest.in > result
+
+echo "Filename input, filename output:"
+time ./test -itest.in -oresult
+
+echo "Cat input, filename output:"
+cat test.in | time ./test -oresult
